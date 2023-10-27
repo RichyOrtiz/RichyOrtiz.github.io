@@ -12,11 +12,16 @@
 		background:url(imagenes/Canter\ 3d.png) ;
 		background-size:cover;
 		background-repeat: no-repeat;
-		background-attachment: fixed;	
+		background-attachment: fixed;
+		background-position: bottom;
+		background-position-y: center;	
 	}
 
 	.Principal{
 		min-height: 75vh;
+		max-height: auto;
+		max-width: auto;
+
 	}
 
 
@@ -66,7 +71,8 @@
 		color: #f3f3f3;
 		font-size: 20px;
 		font-weight: bold;
-		text-align:end;	
+		text-align:end;
+		margin-right: 20px;	
 	}
 
 	/* Conocenos */
