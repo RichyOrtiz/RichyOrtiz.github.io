@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Montserrat Alternates', sans-serif;
+		font-style: italic;
+	}
+
+
+	body{
+		background:url(imagenes/Canter\ 3d.png) ;
+		background-size:cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;	
+	}
+
+	.Principal{
+		min-height: 75vh;
+	}
+
+
+	.logos{
+		opacity: 80%;
+		width: 18%;
+		height: 170px;
+	}
+	
+	.header{
+		width: 100%;
+		height: 100px;
+		position:absolute;
+		top: 0;left: 0;
+	}
+
+
+	.menu{
+		float: right;
+		line-height: 100px;
+		width: 90%;
+		max-width: 1vw;
+		min-width: 80vw;
+		margin: auto;
+	}
+	.menu a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: solid transparent;
+		color: #1d3774;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid;
+		font-size: 2em;
+		margin-right: 20px;
+		font-style: oblique;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		
+	}
+	.menu a:hover{
+		border-bottom: 2px solid #26419a;
+		padding-bottom: 5px;
+		color: #26419a;
+	}
+
+	footer {
+		color: #f3f3f3;
+		font-size: 20px;
+		font-weight: bold;
+		text-align:end;	
+	}
+
+	/* Conocenos */
+
+	.image-area{
+	flex-wrap: wrap;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	}
+
+	.img-wrapper{
+	width: 300px;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+	margin: 20px;
+	}
+
+	.img-wrapper:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 180%;
+	height: 100%;
+	width: 100%;
+	background: rgba(255,255,255,.3);
+	z-index: 1;
+	transform: skew(45deg);
+	transition: .5s;
+	}
+
+	.img-wrapper:hover:before{
+	left: -180%;
+	}
+
+	.img-wrapper img{
+	height: 400px;
+	width: 300px;
+	filter: grayscale(100%);
+	transition: 2s;
+	}
+
+	.img-wrapper:hover img{
+	filter: grayscale(0%);
+	transform: scale(1.1);
+	}
+
+	.img-wrapper h2{
+	background: tomato;
+	font-family: Poppins;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 10px 0;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	transform: perspective(400px) rotateY(90deg);
+	transform-origin: right;
+	transition: 1s;
+	}
+
+	.img-wrapper:hover h2{
+	transform: perspective(400px) rotateY(0deg);
+	}
+
+	.img-wrapper ul{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: rgba(255,255,255,0);}
+
+	.img-wrapper ul li{
+	background: #333;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	line-height: 40px;
+	transform: perspective(800px) rotateY(90deg);
+	transition: .5s;
+	transform-origin: left;
+	}
+
+	.img-wrapper:hover ul li{
+	transform: perspective(800px) rotateY(0deg);
+	}
+
+	.img-wrapper:hover ul li:nth-child(1){
+	transition-delay: .2s;
+	}
+
+	.img-wrapper:hover ul li:nth-child(2){
+	transition-delay: .6s;
+	}
+
+	.img-wrapper:hover ul li:nth-child(3){
+	transition-delay: .8s;
+	}
+
+	.img-wrapper:hover ul li:nth-child(4){
+	transition-delay: 1s;
+	}
+
+	.img-wrapper ul li a{
+	color: tomato;
+	background: rgba(255,255,255,0);
+	}
+
+	.img-wrapper ul li i{
+	color: tomato;
+	background: rgba(255,255,255,0);
+	}
+
+	.img-wrapper ul li i:hover{
+	color: #fff;
+	background: rgba(255,255,255,0);
+	}
+
+/* productos */
+
+	.producto{
+	flex-wrap: wrap;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	}
+
+	.card{
+	position: relative;
+	width: 360px;
+	height: 500px;
+	margin: 20px;
+	}
+
+	.card .face{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	border-radius: 10px;
+	overflow: hidden;
+	transition: .5s;
+	}
+
+	.card .front{
+	transform: perspective(600px) rotateY(0deg);
+	box-shadow: 0 5px 10px #000; 
+	}
+
+	.card .front img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	}
+
+	.card .front h3{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 95px;
+	line-height: 30px;
+	color: #fff;
+	background: rgba(0,0,0,.4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	}
+
+	.card .back{
+	transform: perspective(600px) rotateY(180deg);
+	background: rgb(3, 35, 54);
+	padding: 15px;
+	color: #f3f3f3;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: center;
+	box-shadow: 0 5px 10px #000;
+	}
+
+	.card .back .link{
+	border-top: solid 1px #f3f3f3;
+	height: 50px;
+	line-height: 50px;
+	}
+
+	.card .back .link a{
+	color:  #2094b4;
+	}
+
+	.card .back .link a:hover{
+	font-size: 1.3em;
+	color: #115588;
+	}
+
+	.card .back h3{
+	color: #2094b4;
+	font-size: 27px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	letter-spacing: 2px;
+	}
+
+	.card .back p{
+	font-size:70%;
+	letter-spacing: 1px;
+	}
+
+	.card .back li{
+	font-size:70%;
+	letter-spacing: 1px;
+	}
+
+	.card:hover .front{
+	transform: perspective(600px) rotateY(180deg);
+	}
+
+	.card:hover .back{
+	transform: perspective(600px) rotateY(360deg);
+	}
+
+/*error 404 */
+
+	.error-404{
+	background:url(imagenes/error_404.gif) ;
+	background-size:90em;
+	background-repeat: no-repeat;
+	background-position:right;
+	height: 40em;
+	}
+
+
+
+
+
